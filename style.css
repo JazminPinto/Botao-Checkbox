@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(rgb(219, 211, 224), #62387e);
+}
+
+label {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background: #954daba6;
+    box-shadow: 0 0 0 4px #7c4b98;
+    border-radius: 75px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label input {
+    appearance: none;
+}
+
+label span{
+    position: absolute;
+    left: 0;
+    width: 175px;
+    height: 100%;
+    background: url(img/xicara-vazia.png) no-repeat;
+    background-size: auto 100% ;
+    border-radius: 5rem;
+    transition: 3s;
+    transform: rotate(-180deg);
+    transform-origin: 75px;
+}
+
+label input:checked ~ span{
+    left: 150px;
+    background: url(img/xicara-cheia.jpg) no-repeat;
+    background-size: auto 100% ;
+    border-radius: 5rem;
+    transform: rotate(360deg);
+
+}
+
+label h6{
+    position: absolute;
+    left: -130px;
+    font-family: Century Gothic;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+    filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff);
+    transition: 3s;
+
+}
+
+label input:checked ~ h6{
+    color: #3f3c3c;
+    filter: none;
+}
+
+label h6:last-child{
+    left: initial;
+    right: -120px;
+    color: #3f3c3c;
+    filter: none;
+}
+
+label input:checked ~ h6:last-child{
+    filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff);
+    color: #fff;
+
+}
+
+a img {
+    position: absolute;
+    border-radius: 5rem;
+    border-style: ridge;
+    width: 8rem;
+    left: 1rem;
+    top: 1rem;
+}
